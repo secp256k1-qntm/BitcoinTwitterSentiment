@@ -54,6 +54,7 @@ for tweet in tweepy.Cursor(api.search,
         #print('Negative '+ ctweet)
         ncnt += 1
         # List of common FUD in media
+        # fudRegex is not made dynamic for specific reason. These are the social attack vectors which marked the bottom of the trend and you would have been safer buying in that zone then later selling on peak euphoria. Ask nouriel lol
         fudRegex = re.compile(r'death spiral|obituary|market is dead|bitcoin flashcrash|bitcoin banned|ban on bitcoin|end of bitcoin|bitcoin funeral|china bans|korea bans|bitcoin is fraud|etf reject|btc hardfork|bitcoin died|bitcoin bloodbath|crypto hell|bitcoin nightmare', re.IGNORECASE)
         fud = fudRegex.search(ctweet)
         if fud is not None:
