@@ -43,7 +43,7 @@ for tweet in tweepy.Cursor(api.search,
                            include_entities=False,  # Do not include URLs
                            since=earlier,  # Start date
                            until=today,  # Till date
-                           lang="en").items(100):  # Language english and tweet limit 25
+                           lang="en").items(100):  # Language english and tweet limit 100
     if cnt > 100:
         break
     ctweet = clean_tweet(tweet.text)
